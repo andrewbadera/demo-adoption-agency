@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>State Adoption Resource Center</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --primary: #1f4e79;
+      --primary-soft: #dcebf8;
+      --accent: #2f855a;
+      --text: #1f2933;
+      --muted: #52606d;
+      --border: #d9e2ec;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2d6ea3 100%);
+      color: #fff;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .container {
+      width: min(1100px, 100% - 2rem);
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    .hero-copy p {
+      font-size: 1.1rem;
+      margin: 0 0 1.5rem;
+      max-width: 42rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .panel,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel {
+      padding: 1.5rem;
+      color: var(--text);
+    }
+
+    main {
+      padding: 2rem 0 4rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    .section-header {
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      margin-bottom: 0.35rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1.25rem;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p,
+    .card li,
+    .panel li {
+      color: var(--muted);
+    }
+
+    .highlight {
+      background: var(--primary-soft);
+      border-color: #bed4ea;
+    }
+
+    .contact-list,
+    .faq-list,
+    .prompt-list {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.1rem;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <strong>State Adoption Resource Center</strong>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-copy">
+          <h1>Support for every step of the adoption journey.</h1>
+          <p>
+            This demo site simulates the services, guidance, and family resources a state
+            adoption agency may provide for children, foster families, and prospective adoptive parents.
+          </p>
+          <div class="pill-row" aria-label="Featured services">
+            <span class="pill">Home study preparation</span>
+            <span class="pill">Matching and placement support</span>
+            <span class="pill">Post-adoption counseling</span>
+          </div>
+        </div>
+
+        <aside class="panel" aria-labelledby="demo-heading">
+          <h2 id="demo-heading">Agent Framework demo focus</h2>
+          <p>
+            The content on this page is organized to support L200 demonstrations such as FAQ retrieval,
+            service triage, and guided next-step recommendations.
+          </p>
+          <ul class="prompt-list">
+            <li>“What support is available for families adopting sibling groups?”</li>
+            <li>“How do I start a home study?”</li>
+            <li>“What benefits are available after adoption is finalized?”</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="services">
+      <div class="section-header">
+        <h2>Adoption services</h2>
+        <p>Families can explore programs designed to help children find safe, permanent homes.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Family readiness</h3>
+          <p>Orientation sessions, readiness checklists, and training that explain licensing, timelines, and expectations.</p>
+        </article>
+        <article class="card">
+          <h3>Child matching</h3>
+          <p>Caseworker-guided matching based on age range, sibling placement needs, medical supports, and family strengths.</p>
+        </article>
+        <article class="card">
+          <h3>Placement transition</h3>
+          <p>Visit planning, transition calendars, and coordination with foster families, therapists, and schools.</p>
+        </article>
+        <article class="card">
+          <h3>Post-adoption support</h3>
+          <p>Referrals for counseling, crisis support, parent mentoring, and respite resources after finalization.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resources">
+      <div class="section-header">
+        <h2>Family resources</h2>
+        <p>Practical information for navigating paperwork, benefits, and community support.</p>
+      </div>
+      <div class="grid">
+        <article class="card highlight">
+          <h3>Financial assistance</h3>
+          <p>Learn about adoption subsidies, reimbursement for non-recurring costs, and Medicaid eligibility when applicable.</p>
+        </article>
+        <article class="card highlight">
+          <h3>Education and training</h3>
+          <p>Access webinars on trauma-informed parenting, attachment, school advocacy, and support for teens.</p>
+        </article>
+        <article class="card highlight">
+          <h3>Legal and records help</h3>
+          <p>Get help understanding consent, finalization steps, and how to request non-identifying records.</p>
+        </article>
+        <article class="card highlight">
+          <h3>Youth-centered planning</h3>
+          <p>Specialized planning for older youth, sibling groups, and children who need ongoing behavioral or medical support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="section-header">
+        <h2>Frequently asked questions</h2>
+        <p>Answers to common questions families may ask an agency assistant.</p>
+      </div>
+      <div class="panel">
+        <ol class="faq-list">
+          <li><strong>Who can begin the adoption process?</strong> Adults age 21 or older who meet the agency’s screening and training requirements can apply.</li>
+          <li><strong>How long does the process take?</strong> Timelines vary, but orientation, training, and home study preparation often take several months.</li>
+          <li><strong>Can we adopt siblings?</strong> Yes. The agency prioritizes keeping siblings together whenever it is safe and appropriate.</li>
+          <li><strong>Is support available after finalization?</strong> Yes. Many families continue to receive referrals for counseling, support groups, and crisis services.</li>
+          <li><strong>Are there services for teens?</strong> Yes. Teen-focused supports may include independent living planning, school coordination, and mentoring.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-header">
+        <h2>Contact and next steps</h2>
+        <p>Use these demo contact options to simulate common service workflows.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Call center</h3>
+          <ul class="contact-list">
+            <li>Main intake: (555) 010-2026</li>
+            <li>Hours: Monday–Friday, 8:30 AM–5:00 PM</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Email support</h3>
+          <ul class="contact-list">
+            <li>families@stateadoption.demo</li>
+            <li>Response target: 1 business day</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Start here</h3>
+          <p>Ask for orientation dates, training enrollment, or a checklist of documents needed for the home study.</p>
+          <a class="cta" href="mailto:families@stateadoption.demo">Request information</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Demo content only — not an official government service.
+  </footer>
+</body>
+</html>
